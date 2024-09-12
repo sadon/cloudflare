@@ -81,7 +81,7 @@ def set_ipaddr(zone,record,ipaddr):
         exit(1)
     data = {
         'type':     "A",
-        'ttl':      "60", # 30: [{'code': 9021, 'message': 'TTL must be between 60 and 86400 seconds, or 1 for Automatic.'}]}], 'messages': []}
+        'ttl':      60, # 30: [{'code': 9021, 'message': 'TTL must be between 60 and 86400 seconds, or 1 for Automatic.'}]}], 'messages': []}
         'priority': 10,
         'proxied':  False
     }
@@ -110,7 +110,7 @@ def get_zone_id(zone):
 def set_txt_record(zone,record,record_txt):
     data = {
         'type':     "TXT",
-        'ttl':      "60", # set default to 120
+        'ttl':      60, # set default to 120
         'priority': 10,
         'proxied':  False
     }
